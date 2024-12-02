@@ -1,4 +1,5 @@
 def main():
+### Part One ###
     input = open("./input", "r")
 
     list_1 = []
@@ -18,7 +19,16 @@ def main():
         local_distance = abs(list_1[i] - list_2[i])
         distance = distance + local_distance
 
-    print(distance)
+    print('Part 1: ' + str(distance))
+
+### Part Two ###
+    similarity = 0
+
+    for value in list_1:
+        local_similarity = value * list_2.count(value)
+        similarity = similarity + local_similarity
+
+    print('Part 2: ' + str(similarity))
 
 
 main()
